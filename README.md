@@ -1,4 +1,12 @@
-# Installer Postegresql sur Mac
+# Postgresql config
+
+## Installer sur Docker
+
+```
+docker run --name postgresql -e POSTGRES_USER=myusername -e POSTGRES_PASSWORD=mypassword -p 5432:5432 -v postgres:/var/lib/postgresql/data -d postgres
+```
+
+## Installer Postgresql sur Mac
 
 Voici les lignes de commande.
 
@@ -29,8 +37,8 @@ psql postgres
 ```
 
 ```
-CREATE ROLE root WITH LOGIN PASSWORD 'password';
-ALTER ROLE root CREATEDB;
+CREATE ROLE myusername WITH LOGIN PASSWORD 'mypassword';
+ALTER ROLE myusername CREATEDB;
 ```
 
 Ouvrir PgAdmin4 qui est une application comme une autre dans le Dock Mac.
@@ -40,3 +48,15 @@ Puis ajouter une nouveau serveur, clique droit sur Server, puis Create server.
 Donner un `name` à son serveur, puis dans les paramètres de connexion il faut mettre `localhost` dans le `host` et le `login`/`password` sont `root` et `password`.
 
 On peut maintenant surfer dans le serveur postegresql.
+
+## Tester la connexion avec Node.js
+
+```
+npm install
+```
+
+Puis lancer le fichier racine
+
+```
+node index.js
+```

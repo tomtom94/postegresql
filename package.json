@@ -1,0 +1,23 @@
+{
+  "name": "postegresql",
+  "version": "1.0.0",
+  "description": "Voici les lignes de commande.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomtom94/postegresql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomtom94/postegresql/issues"
+  },
+  "homepage": "https://github.com/tomtom94/postegresql#readme",
+  "dependencies": {
+    "pg": "^8.9.0"
+  }
+}
